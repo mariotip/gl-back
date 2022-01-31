@@ -10,12 +10,9 @@ export default class UsersSchema extends BaseSchema {
       table.string('email', 255).notNullable()
       table.string('password').notNullable()
       table.string('phone')
-
-      /**
-       * Uses timestampz for PostgreSQL and DATETIME2 for MSSQL
-       */
       table.timestamp('created_at', { useTz: true }).notNullable()
       table.timestamp('updated_at', { useTz: true }).notNullable()
+      table.timestamp('deleted_at', { useTz: true }).nullable()
     })
   }
 
