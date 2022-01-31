@@ -22,7 +22,7 @@ export default class User extends compose(BaseModel, SoftDeletes) {
   @column()
   public phone?: string
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime()
   public deletedAt: DateTime
 
   @column.dateTime({ autoCreate: true })
