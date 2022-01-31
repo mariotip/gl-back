@@ -1,9 +1,8 @@
 import { DateTime } from 'luxon'
 import Hash from '@ioc:Adonis/Core/Hash'
 import { column, beforeSave, BaseModel } from '@ioc:Adonis/Lucid/Orm'
-import { SoftDeletes } from '@ioc:Adonis/Addons/LucidSoftDeletes'
-import { compose } from '@ioc:Adonis/Core/Helpers'
-export default class User extends compose(BaseModel, SoftDeletes) {
+
+export default class User extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
@@ -21,9 +20,6 @@ export default class User extends compose(BaseModel, SoftDeletes) {
 
   @column()
   public phone?: string
-
-  @column.dateTime({ autoCreate: true })
-  public deletedAt: DateTime
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

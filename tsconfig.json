@@ -29,8 +29,7 @@
       "@adonisjs/core",
       "@adonisjs/repl",
       "@adonisjs/lucid",
-      "@adonisjs/auth",
-      "adonis-lucid-soft-deletes"
+      "@adonisjs/auth"
     ]
   }
 }
